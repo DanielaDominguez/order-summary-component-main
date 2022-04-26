@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+*,
+::after,
+::before {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+body {
+  background-color: hsl(225deg, 100%, 94%);
+}
+
+.main {
+  min-height: 100vh;
+  background-image: url(../images/pattern-background-desktop.svg);
+  background-repeat: repeat-x;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.main .card {
+  background-color: white;
+  width: 400px;
+  border-radius: 15px;
+}
+.main .card .card__img {
+  width: 100%;
+  display: block;
+  object-fit: contain;
+  border-radius: 15px 15px 0 0;
+}
+.main .card .card__content {
+  padding: 40px;
+  overflow: hidden;
+}
+.main .card .card__content .content__title {
+  color: hsl(223deg, 47%, 23%);
+  text-align: center;
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+.main .card .card__content .content__paragraph {
+  color: hsl(224deg, 23%, 55%);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+.main .card .card__content .content__details {
+  color: hsl(225deg, 100%, 98%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin: 20px 0 25px;
+  border-radius: 10px;
+}
+.main .card .card__content .content__details .details__plan {
+  display: flex;
+  gap: 20px;
+}
+.main .card .card__content .content__details .details__plan .details__img {
+  display: block;
+  object-fit: contain;
+}
+.main .card .card__content .content__details .details__plan .plan__price .price__time {
+  color: hsl(223deg, 47%, 23%);
+  font-weight: 900;
+}
+.main .card .card__content .content__details .details__plan .plan__price .price__cost {
+  color: hsl(224deg, 23%, 55%);
+  font-weight: 500;
+}
+.main .card .card__content .content__details .details__change {
+  color: hsl(245deg, 75%, 52%);
+  font-weight: 700;
+}
+.main .card .card__content .content__details .details__change:hover {
+  opacity: 0.6;
+  text-decoration: none;
+}
+.main .card .card__content .content__button {
+  display: block;
+  background-color: hsl(245deg, 75%, 52%);
+  color: white;
+  font-family: "Red Hat Display", sans-serif;
+  width: 100%;
+  padding: 15px 0;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+.main .card .card__content .content__button:hover {
+  opacity: 0.6;
+}
+.main .card .card__content .content__cancel {
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  color: hsl(223deg, 47%, 23%);
+  font-weight: 900;
+  opacity: 0.6;
+}
+.main .card .card__content .content__cancel:hover {
+  opacity: 1;
+}
+.main .attribution {
+  margin-top: 40px;
+}
+
+/*# sourceMappingURL=styles.css.map */

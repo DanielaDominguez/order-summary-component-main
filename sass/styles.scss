@@ -1,0 +1,135 @@
+@use 'index/index';
+@use 'sass:map';
+
+*,
+::after,
+::before {
+    @include index.resetStyleSheet;
+}
+
+html {
+    @include index.setHTML
+}
+
+body {
+    background-color: map.get(index.$primaryColors, "paleBlue");
+}
+
+.main {
+    min-height: 100vh;
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-repeat: repeat-x;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    .card {
+        background-color: white;
+        width: 400px;
+        border-radius: 15px;
+
+        .card__img {
+            width: 100%;
+            display: block;
+            object-fit: contain;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .card__content {
+            padding: 40px;
+            overflow: hidden;
+
+            .content__title {
+                color: map.get(index.$neutralColors, "darkBlue");
+                text-align: center;
+                font-weight: index.$redHatW900;
+                margin-bottom: 30px;
+            }
+
+            .content__paragraph {
+                color: map.get(index.$neutralColors, "desaturatedBlue");
+                text-align: center;
+                font-size: index.$sizeParagraph;
+                font-weight: index.$redHatW500;
+            }
+
+            .content__details {
+                color: map.get(index.$neutralColors, "veryPaleBlue");
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px;
+                margin: 20px 0 25px;
+                border-radius: 10px;
+
+                .details__plan {
+                    display: flex;
+                    gap: 20px;
+
+                    .details__img {
+                        display: block;
+                        object-fit: contain;
+                    }
+
+                    .plan__price {
+                        .price__time {
+                            color: map.get(index.$neutralColors, "darkBlue");
+                            font-weight: index.$redHatW900;
+                        }
+
+                        .price__cost {
+                            color: map.get(index.$neutralColors, "desaturatedBlue");
+                            font-weight: index.$redHatW500;
+                        }
+                    }
+                }
+
+                .details__change {
+                    color: map.get(index.$primaryColors, "brightBlue");
+                    font-weight: index.$redHatW700;
+
+                    &:hover {
+                        opacity: 0.6;
+                        text-decoration: none;
+                    }
+                }
+            }
+// replace element
+            .content__button {
+                display: block;
+                background-color: map.get(index.$primaryColors, "brightBlue");
+                color: white;
+                font-family: index.$redHatFont;
+                width: 100%;
+                padding: 15px 0;
+                border-radius: 10px;
+                font-size: 16px;
+                font-weight: index.$redHatW700;
+                cursor: pointer;
+                margin-bottom: 30px;
+
+                &:hover {
+                    opacity: 0.6;
+                }
+            }
+//ancore element
+            .content__cancel {
+                text-align: center;
+                display: block;
+                text-decoration: none;
+                color: map.get(index.$neutralColors, "darkBlue"); 
+                font-weight: index.$redHatW900;
+                opacity: 0.6;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .attribution {
+        margin-top: 40px;
+    }
+}
